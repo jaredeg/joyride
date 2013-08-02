@@ -1,0 +1,27 @@
+extends ./layout
+
+block content
+
+      h2 top ten links
+      .template
+      table.table.table-condensed
+        thead
+         tr
+          th
+           | Site
+          th
+           | ID
+          th
+           | Visits
+        tbody
+         each item in urls
+          tr
+           td
+            a(href=item.url) #{item.url} 
+           td
+            | #{item.id}
+           td
+            | #{item.count}
+
+
+
